@@ -67,3 +67,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
+// Mistakes i was making : 
+// creating tasks in loop not setup 
+// had to set the esp32 to blink outside the pdRevcieve status block, allowing the esp32 to blink always and not just when there is a new addition to queue 1 (for 1 cycle)
+// Also updated delays, sending or receving from queues dont need dealys, but we shou,d add delays to 
+// while checking for serial input(Task A), Task B anyway delays when blinking 
